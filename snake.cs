@@ -4,7 +4,9 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace SimpleSnakeGame
+## NEEDS COMMENTING AND OVERALL UPDATING, NO RECENT DEBUGGING
+
+namespace SimpleSnake
 {
     public partial class SnakeGameForm : Form
     {
@@ -49,8 +51,8 @@ namespace SimpleSnakeGame
             }
             else
             {
-                string gameOverText = "Game Over! Press Enter to restart.";
-                Font gameOverFont = new Font("Arial", 16, FontStyle.Bold);
+                string gameOverText = "Game Over! Press Enter to restart";
+                Font gameOverFont = new Font("Arial", 20, FontStyle.Bold);
                 SizeF textSize = canvas.MeasureString(gameOverText, gameOverFont);
                 PointF textPosition = new PointF((this.ClientSize.Width - textSize.Width) / 2, (this.ClientSize.Height - textSize.Height) / 2);
                 canvas.DrawString(gameOverText, gameOverFont, Brushes.Black, textPosition);
